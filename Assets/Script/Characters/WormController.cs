@@ -112,7 +112,7 @@ public class WormController : MonoBehaviour
 
     public void Walk()
     {
-        Debug.Log("walk...");
+        // Debug.Log("walk...");
         _isWalk = true;
         LookAtPlayer();
         // 与player距离小于近身距离
@@ -130,7 +130,7 @@ public class WormController : MonoBehaviour
     
     public void DashSkill()
     {
-        Debug.Log("Dash...");
+        // Debug.Log("Dash...");
         _isDash = true;
         LookAtPlayer();
         // Debug.Log(_dashDuration);
