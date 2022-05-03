@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FireBallController : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class FireBallController : MonoBehaviour
         {
             _animator.Play("Explosion");
             //@TODO player受伤
-            
+            GameManager.Instance.playerController.TakeDamage(Random.Range(1, 6));
             _collider2D.enabled = false;
         }
         if (col.gameObject.layer == LayerMask.NameToLayer("Ground"))
